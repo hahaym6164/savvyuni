@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Search job posting</span>
+    </div>
+    <input type="text" (keyup)="this.searchTerm =ip.value" #ip class="form-control" placeholder="Jobs" aria-label="Jobs" aria-describedby="basic-addon1">
+  </div>
+  <div class="card" style="border:0;background-color: #F4F4F4;border-radius: 1em;" *ngFor="let job of jobPostings; index as i;" >
+    <div class="card-body" *ngIf="searchTerm? job.title.indexOf(searchTerm)>-1: true">
+      <div class="input-group mb-3">
+      
+        <input type="text" class="form-control" #title
+        [value]="job.title" disabled="true" aria-describedby="basic-addon1">
+      </div>
+  <button type="button" class="btn btn-primary" (click)="editJobs(job._id,title.value); title.disabled=!title.disabled">Edit</button>
+  <button type="button" class="btn btn-danger" (click)="deleteJobs(job._id)">Delete</button>
+    </div>
+  </div>
+  
+</div>
