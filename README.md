@@ -7,8 +7,11 @@
  
  The full request has been satisfied.
  the frontend port is 4200
- the backend port is 3000
+ runing with command "ng serve"
  
+ the backend port is 3000
+ runing with command "node app.js"
+
  Using restful api, boostrap, independency injection and cheerio.
  
  there is a crawler api that is used for scraped the job posting from indeed but you don't have to use that. 
